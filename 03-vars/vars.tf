@@ -26,8 +26,8 @@ output "sample4" {
 variable "sample5" {
   default = [
   100,
-  "abc"
-  "xyz"
+  "abc",
+  "xyz",
   ]
 }
 
