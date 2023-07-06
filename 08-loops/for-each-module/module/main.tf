@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.centos8.id
-  instance_type = var.instance
+  instance_type = var.instance_type
 
 
   tags = {
@@ -27,5 +27,5 @@ data "aws_ami" "centos8" {
 #
 #}
 
-variable "instance_type" {
-  variable "name {}
+variable "instance_type" {}
+  variable "name" {}
