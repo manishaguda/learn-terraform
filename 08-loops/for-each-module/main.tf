@@ -16,7 +16,7 @@ module "ec2" {
   source = "./module"
 
   for_each = var.components
-  instance_type = each.value.name
+  instance_type = each.value.instance_type
   name = each.value.name
 
 ## always iterate module, not resources.
