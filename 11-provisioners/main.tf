@@ -30,7 +30,7 @@ resource "null_resource" "provision" {
 
   provisioner "remote-exec" {
     connection {
-      host     = aws_instance.web
+      host     = aws_instance.web.public_ip
       user     = "centos"
       password = "DevOps321"
     }
@@ -42,13 +42,6 @@ resource "null_resource" "provision" {
 }
 
 
-provider "remote-exec" {
-  connection {
-    host     = self_publicip
-    user     = "centos"
-    password = "DevOps321"
-  }
-}
 
 
 resource "aws_security_group" "allow_tls" {
