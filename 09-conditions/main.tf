@@ -1,6 +1,6 @@
 resource "aws_instance" "web" {
   ami           = data.aws_ami.centos8.id
-  instance_type = var.type == "null" ? "t3.micro" : var
+  instance_type = var.type == "null" ? "t3.micro" : var.type
 
 
   tags = {
